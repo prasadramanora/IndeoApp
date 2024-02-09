@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/connecrlogo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp"/>
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:text="message"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnok"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@color/colorPrimary"
+        android:text="ok"
+        android:textColor="#fff" />
+</RelativeLayout>

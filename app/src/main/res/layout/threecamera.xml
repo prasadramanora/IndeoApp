@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.RamanoraGlobal.InDeoAppNew.Activity.VedioConfranceScreen">
+
+    <TextView
+        android:id="@+id/tv_cameramode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+
+        android:text=""
+        android:textColor="#000"
+        android:textSize="15dp"
+
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <RelativeLayout
+        android:id="@+id/publisherview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="90dp"
+
+        android:background="@mipmap/border"
+        android:padding="3dp"></RelativeLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/swapCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="Swap "
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleAudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+
+                android:text="Toggle Audio"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textOff="@string/audio1"
+                android:textOn="@string/audio"
+                android:textSize="14dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleVideo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:checked="true"
+                android:text="Toggle Video"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textOff="@string/video"
+                android:textOn="@string/video1"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="Sound"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/disconnect"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+
+        android:src="@drawable/disconnect" />
+
+
+    <Button
+        android:id="@+id/btnrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/disconnect"
+        android:text="Record"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+
+        android:textSize="12dp" />
+
+</RelativeLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homescreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/lineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#F57F17"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/lineImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true" />
+
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="Welcome!"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTextView"
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/background"
+                android:hint="Enter Name"
+                android:maxLines="1"
+
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#757575"
+                android:textColorHint="#757575"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:visibility="gone"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/edtemail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Long Shot Camera"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/radioButton1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Mid Shot Camera"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/radioButton2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="CloseUp Camera"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/radioButton2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Presenter Camera"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtemail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittextborder"
+                android:hint=" Email Id"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dip"
+                android:singleLine="true"
+                android:textColor="#757575"
+                android:textColorHint="#757575"
+
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtpass"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittextborder"
+                android:gravity="center_vertical"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:paddingLeft="10dip"
+                android:singleLine="true"
+                android:textColor="#757575"
+                android:textColorHint="#757575"
+                android:textSize="14sp"></EditText>
+
+            <EditText
+                android:id="@+id/roomId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@mipmap/back"
+
+                android:hint="Enter Api Key (eg.46787584)"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#757575"
+                android:textColorHint="#757575"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/radioButtonGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/roomId"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/moderatorRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Moderator"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/presenterRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:checked="false"
+                    android:text="Participant"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/joinRoom"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_margin="15dp"
+                android:background="@drawable/borderbuttun"
+
+                android:text="Join"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:text="By logging in you accept to all the Terms"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:text="Conditions of using the InDeo App"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/rllayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+
+
+            android:background="#000"
+            android:text="©Ramanora Global Pvt Ltd. All Rights Reserved."
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="50dp"
+        android:background="@drawable/battery"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Save Battary"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Are you sure want to show all camera? "
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Note:-if You are show all camera then it effects battary life less and if you hide all camera then battary life is good.Thanks  "
+        android:layout_gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="Yes"
+            android:id="@+id/btn_yes"
+            android:textColor="#fff"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="No"
+            android:id="@+id/btn_no"
+            android:layout_margin="5dp"
+            android:textColor="#fff"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>

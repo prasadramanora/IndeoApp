@@ -1,0 +1,2371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.RamanoraGlobal.InDeoAppNew.Activity.VedioConfranceScreen">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/subscriber_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <FrameLayout
+            android:id="@+id/publisher_container"
+            android:layout_width="@dimen/publisher_layout_width"
+            android:layout_height="@dimen/publisher_layout_height"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/publisher_right_margin"
+            android:layout_marginRight="@dimen/publisher_right_margin"
+            android:layout_marginBottom="@dimen/publisher_bottom_margin"
+            android:background="@color/publisher_border_color"
+            android:focusable="true"
+            android:focusedByDefault="true"
+            android:padding="@dimen/publisher_padding">
+
+            <ImageView
+                android:id="@+id/archiving_indicator_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="@dimen/archiving_indicator_top_margin"
+                android:layout_marginEnd="@dimen/archiving_indicator_right_margin"
+                android:layout_marginRight="@dimen/archiving_indicator_end_margin"
+                android:src="@drawable/archiving_indicator"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_cameramode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+
+        android:text=""
+        android:textColor="#000"
+        android:textSize="15dp"
+
+        android:textStyle="bold">
+
+    </TextView>
+<Button
+    android:layout_width="100dp"
+    android:text="Mute All"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPrimary"
+    android:layout_marginRight="80dp"
+   android:textAllCaps="true"
+    android:visibility="gone"
+    android:id="@+id/btn_muteall"
+    android:layout_marginBottom="34dp"
+    android:layout_toLeftOf="@+id/participatevieew"
+    android:layout_height="wrap_content"></Button>
+
+    <RelativeLayout
+        android:id="@+id/publisherview"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="34dp"
+        android:background="@mipmap/border"
+        android:padding="3dp"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/participatevieew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="105dp"
+        android:background="@mipmap/border"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="0dp"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber0"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber0"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+
+                    <TextView
+                        android:id="@+id/tv_name1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber7"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber7"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber8"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber8"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_name6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_weight=".5">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber10"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber10"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/back"
+
+                        android:padding="2dp">
+
+                        <Button
+                            android:id="@+id/tv_partname11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber11"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber11"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview12"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber12"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber12"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview13"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber13"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber13"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber14"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber14"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_name11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight=".5"
+                    android:padding="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview15"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber15"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber15"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber16"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber16"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber17"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber17"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber18"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber18"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview19"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber19"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber19"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_name16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_name17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name19"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name20"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight=".5"
+                    android:padding="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview20"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber20"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber20"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview21"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber21"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber21"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview22"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber22"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber22"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview23"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber23"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber23"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview24"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber24"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber24"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_name21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_name24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_name25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight=".5"
+                    android:padding="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview25"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber25"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber25"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview26"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber26"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber26"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber27"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber27"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber28"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber28"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/subscriberview29"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        android:layout_weight=".5"
+
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/tv_partname29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleAudioSubscriber29"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/mute"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleVudioSubscriber29"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="35dp"
+                            android:background="@drawable/vediomuteimg"
+                            android:checked="true"
+                            android:text="Toggle Audio"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="1dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_name26"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_name28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name29"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_name30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/swapCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="Swap "
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleAudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:checked="true"
+                android:text="Toggle Audio"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textOff="@string/audio1"
+                android:textOn="@string/audio"
+                android:textSize="14dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleVideo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:checked="true"
+                android:text="Toggle Video"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textOff="@string/video"
+                android:textOn="@string/video1"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="Sound"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+            <Button
+                android:id="@+id/btn_reconnctpublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="3dp"
+
+                android:layout_alignParentBottom="true"
+
+
+                android:background="@color/colorPrimary"
+                android:src="@drawable/disconnect"
+                android:text="ReconnectPublisher"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:layout_weight="1"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/disconnect"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+
+        android:src="@drawable/disconnect" />
+
+    <ImageView
+        android:id="@+id/iv_britness"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/lightbulb"
+        android:src="@drawable/disconnect"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btnrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/disconnect"
+        android:text="Record Start"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="12dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnrecordstop"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/disconnect"
+        android:text="Record Stop"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="12dp"
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/iv_startrecord"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginBottom="40dp"
+
+        android:src="@drawable/recording"
+
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">InDeo</string>
+    <string name="rationale_video_app">This app needs access to your camera and mic so you can perform video calls</string>
+    <string name="video">VideoOn</string>
+    <string name="video1">VideoOff</string>
+    <string name="audio">Mute</string>
+    <string name="audio1">Unmute</string>
+    <string name="remove">Remove</string>
+    <string name="action_start_archive">Start Archive</string>
+    <string name="action_stop_archive">Stop Archive</string>
+    <string name="action_play_archive">Play Archive</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_settings_dialog">Permissions Required</string>
+    <string name="setting">Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="text_bluetooth_off">Bluetooth is Off</string>
+    <string name="text_bluetooth_on">Bluetooth is On</string>
+
+    <string name="text_enable">Enable</string>
+    <string name="text_disable">Disable</string>
+
+    <string name="text_view_paired">Paired Devices</string>
+    <string name="text_scan_devices">Scan Devices</string>
+    <string name="text_stop_scan">Scan Devices</string>
+
+    <string name="text_list_paired_devices">Paired Devices</string>
+    <string name="text_list_devices">List of Devices</string>
+
+    <string name="text_pair">Pair</string>
+
+</resources>

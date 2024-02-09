@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_gravity="center_horizontal"
+    android:background="#fff"
+    android:layout_height="300dp">
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edtemail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Long Shot Camera"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Mid Shot Camera"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="CloseUp Camera"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Presenter Camera"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="100dp"
+        android:id="@+id/done"
+        android:text="Done"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"></Button>
+</LinearLayout>

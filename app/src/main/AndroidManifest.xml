@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.RamanoraGlobal.InDeoAppNew">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.google.android.things.permission.MANAGE_INPUT_DRIVERS" />
+    <uses-permission android:name="com.google.android.things.permission.MANAGE_BLUETOOTH" />
+    <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" />
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:name="com.RamanoraGlobal.InDeoAppNew.OtherClasses.ApplicationController"
+        android:allowBackup="true" android:icon="@drawable/appiconindio"
+        android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity
+                android:name="com.RamanoraGlobal.InDeoAppNew.Activity.SplashActivity"
+                android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.RamanoraGlobal.InDeoAppNew.Activity.DeviceListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.CameraSelection"/>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.TestDemo"/>
+        <activity
+            android:name="com.RamanoraGlobal.InDeoAppNew.Activity.DeviceListActivityList"
+            android:label="@string/app_name"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.CraeteMetting"
+            android:label="Add Meeting"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.MeetingSheduleScreen"/>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.LoginScreen"/>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.ScreenSharing"
+            android:label="Screen  Sharing"/>
+
+
+        <activity
+            android:name="com.RamanoraGlobal.InDeoAppNew.Activity.VedioConfranceScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="com.RamanoraGlobal.InDeoAppNew.Activity.ThreeCamera"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

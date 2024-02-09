@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/appiconindio" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Select date"
+        android:textColor="#fff">
+
+    </Button>
+
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Select Time"
+        android:textColor="#fff">
+
+    </Button>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edt_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:background="@mipmap/back"
+        android:hint="Enter Meeting Title"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/edt_agenda"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/back"
+        android:layout_marginTop="20dp"
+        android:hint="Agenda"></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@mipmap/back"
+        android:textSize="14sp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Invited By"></EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_createmmeting"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="Create Meeting"
+            android:textColor="#fff"></Button>
+    </RelativeLayout>
+
+</LinearLayout>
